@@ -228,9 +228,19 @@ header nav .nav-sections ul > li > ul > li {
     margin: 0;
   }
 
+  header nav .nav-sections .default-content-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   header nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li:hover,
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li:hover {
+    cursor: pointer;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul {
