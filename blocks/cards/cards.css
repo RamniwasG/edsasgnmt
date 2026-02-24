@@ -16,6 +16,14 @@
   margin: 16px;
 }
 
+.cards .cards-card-body p {
+  text-align: center;
+}
+
+.cards .cards-card-body p:first-child {
+  font-style: italic;
+}
+
 .cards .cards-card-image {
   line-height: 0;
 }
