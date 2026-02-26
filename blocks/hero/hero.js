@@ -10,7 +10,10 @@ export default async function decorate(block) {
 
     const title = divChildrens[0].textContent.trim();
     const imgPath = divChildrens[0].querySelector('img').src;
-    const subTitle = document.querySelector('.bannercontent').textContent.trim();
+    
+    const subTitleContentDiv = document.querySelector('.bannercontent');
+    const subTitle = subTitleContentDiv.textContent.trim();
+    subTitleContentDiv.innerHTML = '';
 
     const bannerContainerDiv = document.createElement('div');
     bannerContainerDiv.classList.add('container');
