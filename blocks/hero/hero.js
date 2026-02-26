@@ -6,15 +6,22 @@ import { loadFragment } from '../fragment/fragment.js';
  * @param {Element} block The hero block element
  */
 export default async function decorate(block) {
-  // load hero as fragment
-  const heroMeta = getMetadata('hero');
-  const heroPath = heroMeta ? new URL(heroMeta, window.location).pathname : '/hero';
-  const fragment = await loadFragment(heroPath);
+  const divChildrens = block.children;
 
-  // decorate hero DOM
-  block.textContent = '';
-  const hero = document.createElement('div');
-  while (fragment.firstElementChild) hero.append(fragment.firstElementChild);
+    const titleText = divChildrens[0].textContent.trim();
+    const detailsText = divChildrens[1].textContent.trim();
+    const imgPath = divChildrens[2].querySelector('img').src;
+    const bottomBarText = divChildrens[3].textContent.trim();
 
-  block.append(hero);
+    const bannerContainerDiv = document.createElement('div');
+    bannerContainerDiv.classList.add('container');
+    bannerContainerDiv.innerHTML = `
+        <div class="banner-content">
+            <h1>${titleText}</h1>
+            <p>${detailsText}</p>
+        </div>
+    `;
+
+    block.innerHTML = '';
+    block.append(bannerContainerDiv);
 }
