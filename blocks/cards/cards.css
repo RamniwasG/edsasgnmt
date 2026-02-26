@@ -34,11 +34,8 @@
   object-fit: cover;
   border-radius: 8px;
 }
-.cards > ul > li img {
+.cards > ul > li img:hover {
   background-size: 105% !important;
   transform: scale(1.2);
-}
-
-.cards > ul > li img {
   transition: all .5s;
 }
