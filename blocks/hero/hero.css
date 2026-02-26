@@ -17,6 +17,7 @@
 
 .hero-container .hero-wrapper .bannercontent p {
   color: var(--background-color);
+  width: 56%;
 }
 
 .hero {
