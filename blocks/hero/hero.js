@@ -8,17 +8,15 @@ import { loadFragment } from '../fragment/fragment.js';
 export default async function decorate(block) {
   const divChildrens = block.children;
 
-    const titleText = divChildrens[0].textContent.trim();
-    const detailsText = divChildrens[1].textContent.trim();
-    const imgPath = divChildrens[2].querySelector('img').src;
-    const bottomBarText = divChildrens[3].textContent.trim();
+    const title = divChildrens[0].textContent.trim();
+    const subTitle = document.querySelector('.bannercontent').textContent.trim();
 
     const bannerContainerDiv = document.createElement('div');
     bannerContainerDiv.classList.add('container');
     bannerContainerDiv.innerHTML = `
         <div class="banner-content">
-            <h1>${titleText}</h1>
-            <p>${detailsText}</p>
+            <h1>${title}</h1>
+            <p>${subTitle}</p>
         </div>
     `;
 
