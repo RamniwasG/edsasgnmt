@@ -1,3 +1,6 @@
+:root {
+  --bg1: url(/../../images/bg-body.jpg);
+}
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
