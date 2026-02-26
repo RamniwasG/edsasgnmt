@@ -37,5 +37,4 @@
 .cards > ul > li img:hover {
   background-size: 105% !important;
   transform: scale(1.2);
-  transition: all .5s;
 }
