@@ -1,6 +1,15 @@
 :root {
   --bg1: url(/../../images/bg-body.jpg);
 }
+
+.hero-container > .hero-wrapper {
+  height: 400px; /* Adjustable height matching image proportions */
+  background: var(--bg1) center/cover no-repeat; /* Replace with actual shuttle image base64 or URL */
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  position: relative;
+}
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;

@@ -25,5 +25,5 @@ export default async function decorate(block) {
     block.append(bannerContainerDiv);
     
     // change css custom property
-    document.documentElement.style.setProperty("--bg1", `url(${imgPath})`);
+    bannerContainerDiv.style.setProperty("--bg1", `url(${imgPath})`);
 }
